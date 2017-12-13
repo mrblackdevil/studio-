@@ -1,0 +1,123 @@
+// Fonts
+$opensans-r: "opensans-r", sans-serif
+$oxygen-r: "oxygen-r", sans-serif
+$oxygen-b: "oxygen-b", sans-serif
+
+=opensans-r
+	font-family: $opensans-r
+	font-weight: normal
+=oxygen-r
+	font-family: $oxygen-r
+	font-weight: normal
+=oxygen-b
+	font-family: $oxygen-b
+	font-weight: normal
+
+
+
+// Var
+$base-black:  #000
+$base-white:  #fff
+$base-red:    #df5240
+$base-blue:   #1679bf
+$base-green:  #82b440
+$base-grey:		#cccccc
+
+// Template rule   @extend %brn-classic
+
+
+// Mixin  = its mixin paste @include
+// btn
+=btn($padding: 1em 3.6em, $background: #82b440, $border-bottom: 5px solid #4d731b,$border-radius: 5px, $hover: #77a23e)
+		display: inline-block
+		padding: $padding
+		background: $background
+		border: none
+		border-bottom: $border-bottom
+		border-radius: $border-radius
+		outline: none
+		color: $base-white
+		text-transform: uppercase
+		&:hover
+			background: $hover
+		&:active
+			border-bottom: 5px solid #4d731b
+// background
+=bg($imgpath, $position: 0 0, $repeat: no-repeat, $cover: cover)
+  background:
+    image: url("../img/" + $imgpath)
+    position: $position
+    repeat: $repeat
+    size: $cover
+
+// calculateEm
+@function calculateEm($size)
+  $emSize: $size / 16px
+  @return $emSize * 1em
+=font-size($size)
+  font-size: calculateEm($size)
+
+// CSS triangle
+=css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false)
+  @if $round
+    border-radius: 3px
+  @if $direction == down
+    border-left: $size solid transparent
+    border-right: $size solid transparent
+    border-top: $size solid $color
+    margin-top: 0 - round($size / 2.5)
+  @else if $direction == up
+    border-left: $size solid transparent
+    border-right: $size solid transparent
+    border-bottom: $size solid $color
+    margin-bottom: 0 - round($size / 2.5)
+  @else if $direction == right
+    border-top: $size solid transparent
+    border-bottom: $size solid transparent
+    border-left: $size solid $color
+    margin-right: -$size
+  @else if $direction == left
+    border-top: $size solid transparent
+    border-bottom: $size solid transparent
+    border-right: $size solid $color
+    margin-left: -$size
+
+
+// Base style
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	outline: none
+	transition: all 0.45s ease-in-out
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	font-family: $opensans-r
+	overflow-x: hidden
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+a
+	&:hover
+	text-decoration: none !important

@@ -1,0 +1,327 @@
+@import fonts
+@import vars
+
+// header
+.header
+	&__panel
+		background: #1e2735
+		border-bottom: 1px solid #34709d
+	&__panel-callback
+		a
+			display: inline-block
+			padding-top: 10px
+			padding-bottom: 10px
+			+font-size(12px)
+			color: #788293
+			outline: none
+			i
+				margin-right: 5px
+			&:hover
+				color: $base-blue
+				text-decoration: none
+			&:hover i
+				color: $base-blue
+	&__panel-link
+		margin-left: 10px
+	&__panel-social
+		float: right
+		a
+			display: inline-block
+			width: 28px
+			height: 28px
+			margin-top: 3px
+			margin-right: 8px
+			text-align: center
+			border-radius: 50%
+			border: 2px solid $base-blue
+			&:hover
+				border-color: lighten($base-blue, 20%)
+			&:hover i
+				color: lighten($base-blue, 20%)
+			i
+				line-height: 25px
+	&__nav
+		position: relative
+		background: #232f46
+	&__nav-menu
+		position: absolute
+		top: 0
+		right: 25%
+	&__nav-item
+		padding-top: 33px
+		li
+			display: inline-block
+			a
+				padding-left: 1.5em
+				color: $base-white
+				&:hover
+					color: #82b440
+	&__nav-btn
+		float: right
+		margin-top: 29px
+		margin-bottom: 29px
+		+btn($padding: 1.2em 0.9em, $background: #82b440, $border-radius: 5px)
+	&__nav-icon
+		position: absolute
+		display: block
+		top: 47px
+		width: 30px
+		height: 30px
+	&__nav-line
+		display: block
+		width: 30px
+		height: 2px
+		margin-bottom: 4px
+		background: $base-blue
+	&__description
+		position: relative
+		+bg('h-bg.png', $position: center center)
+		padding-top: 14em
+		h1
+			line-height: 1.2
+			+font-size(42px)
+			+oxygen-b
+			text-transform: uppercase
+			color: $base-white
+			span
+				text-transform: none
+				font-size: 32px
+		p
+			+font-size(40px)
+			color: $base-white
+			text-transform: uppercase
+			text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.2)
+			line-height: 0
+	&__description-btn
+		+btn
+		margin-bottom: 5em
+	&__description-share
+		position: absolute
+		right: 60px
+		top: 25px
+	&__share-link
+		display: block
+		width: 36px
+		height: 36px
+		margin-bottom: 10px
+		text-align: center
+		line-height: 38px
+		&:hover
+			transform: translate(-20px)
+		i
+			+font-size(20px)
+			color: $base-white
+		&--bgc1
+			background: #138ecf
+		&--bgc2
+			background: linear-gradient(to top, #f9ed32, #ee2a7b)
+		&--bgc3
+			background: #138ecf
+		&--bgc4
+			background: #d51e1e
+// Section service
+.service
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj48c3RvcCBzdG9wLWNvbG9yPSIjMDBiZWNjIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiMxNjc5YmYiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjMwOCIvPjxzdG9wIHN0b3AtY29sb3I9IiM3ZjM0OTgiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwLjU3Ii8+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmN2Y2NiIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+)
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(0, rgb(0, 190, 204)), color-stop(0.308, rgb(22, 121, 191)), color-stop(0.57, rgb(127, 52, 152)), color-stop(1, rgb(255, 127, 102)))
+  /* Android 2.3
+  background-image: -webkit-repeating-linear-gradient(left, rgb(0, 190, 204) 0%, rgb(22, 121, 191) 30.8%, rgb(127, 52, 152) 57%, rgb(255, 127, 102) 100%)
+  /* IE10+
+  background-image: repeating-linear-gradient(to right, rgb(0, 190, 204) 0%, rgb(22, 121, 191) 30.8%, rgb(127, 52, 152) 57%, rgb(255, 127, 102) 100%)
+  background-image: -ms-repeating-linear-gradient(left, rgb(0, 190, 204) 0%, rgb(22, 121, 191) 30.8%, rgb(127, 52, 152) 57%, rgb(255, 127, 102) 100%)
+	&__box
+		padding-bottom: 50px
+		padding-top: 50px
+		h4
+			padding-left: 25px
+			padding-right: 25px
+			color: $base-white
+			+font-size(20px)
+			font-weight: 700
+		p
+			padding-left: 25px
+			padding-right: 25px
+			color: $base-white
+	&__icon
+		display: block
+		width: 167px
+		height: 160px
+		margin: 0 auto
+		+bg('info-sprite.png', $cover: none)
+		&--pic1
+			+bg('info-sprite.png', $cover: none, $position: -182px 0px)
+		&--pic2
+			+bg('info-sprite.png', $cover: none, $position: 0px -174px)
+		&--pic3
+			+bg('info-sprite.png', $cover: none, $position: -182px -174px)
+// section portfolio
+.portfolio
+	+bg('portfolio-bg-mini.png', $position: top center)
+	h2
+		text-align: center
+		text-transform: uppercase
+		color: $base-white
+		+oxygen-b
+		+font-size(36px)
+		span
+			+oxygen-r
+	&__slider
+		padding-left: 20px
+		img
+			float: left
+			width: 250px
+			height: 180px
+			margin-bottom: 10px
+// section adv
+.adv
+	padding-top: 50px
+	padding-bottom: 50px
+	&__box
+		position: relative
+		background: $base-red
+		&--bg2
+			background: $base-blue
+			&:after
+				border-top-color: $base-blue !important
+		&--bg4
+			background: $base-blue
+			&:after
+				border-top-color: $base-blue !important
+
+		&:after
+			display: block
+			position: absolute
+			top: 100%
+			left: 40px
+			content: ''
+			width: 0
+			height: 0
+			border: 20px solid transparent
+			border-top: 30px solid $base-red
+			border-right: 0
+		p
+			padding: 12px 12px 50px 12px
+			color: $base-white
+	&__title
+		margin-left: 70px
+		padding-bottom: 10px
+		line-height: 0
+		h3
+			+oxygen-b
+			+font-size(15px)
+			text-transform: uppercase
+			line-height: 0.7
+		b
+
+			+oxygen-r
+			text-transform: uppercase
+			color: darken($base-grey,40%)
+// section follow
+.follow
+	padding-top: 70px
+	padding-bottom: 70px
+	+bg('social-bg.png')
+	&__text
+		text-align: center
+		i
+			display: inline-block
+			vertical-align: middle
+			margin-left: 0
+			+font-size(48px)
+			color: $base-blue
+		p
+			display: inline-block
+			vertical-align: middle
+			+font-size(26px)
+			padding-left: 22px
+			color: $base-white
+	&__btn
+		margin-top: 31px
+		+btn($background: $base-red, $border-bottom: none, $hover: darken($base-red, 5%))
+		&:active
+			border: none
+			background: darken($base-red, 10%)
+// footer
+.footer
+	padding-top: 50px
+	+bg('social-bg-2.png')
+	&__social
+		width: 400px
+		margin: 0 auto
+		padding-top: 35px
+		padding-bottom: 10px
+		margin-bottom: 55px
+		border-bottom: 2px dashed #fff
+		text-align: center
+		a
+			display: inline-block
+			width: 60px
+			height: 60px
+			margin-top: 3px
+			margin-right: 8px
+			text-align: center
+			border-radius: 50%
+			border: 2px solid $base-blue
+			&:hover
+				border-color: lighten($base-blue, 20%)
+			&:hover i
+				color: lighten($base-blue, 20%)
+			i
+				+font-size(40px)
+				line-height: 60px
+			&:active
+				border-color: lighten($base-blue, 40%)
+			&:active i
+				color: lighten($base-blue, 40%)
+	&__about
+		color: $base-white
+		h3
+			+font-size(20px)
+			text-transform: uppercase
+			border-bottom: 2px dashed #fff
+	&__post
+		color: $base-white
+		h3
+			+font-size(20px)
+			text-transform: uppercase
+			border-bottom: 2px dashed #fff
+	&__post-list
+		li
+			margin-bottom: 17px
+			a
+				color: $base-white
+				&:hover
+					color: $base-red
+	&__signup
+		color: $base-white
+		h3
+			+font-size(20px)
+			text-transform: uppercase
+			border-bottom: 2px dashed #fff
+		form
+			input
+				width: 100%
+				padding: 1em
+				margin-bottom: 10px
+				color: $base-black
+				+oxygen-b
+	&__signup-btn
+		+btn($background: $base-red,$border-radius: none, $border-bottom: none, $hover: darken($base-red, 5%))
+		&:active
+			border: none
+			background: darken($base-red, 10%)
+	&__panel
+		margin-top: 50px
+		border-top: 2px dashed #fff
+		padding-top: 20px
+		p
+			color: #ccc
+	&__nav-list
+		li
+			display: inline-block
+			float: right
+			a
+				padding-left: .5em
+				color: #ccc
+				&:hover
+					color: $base-red
+@import media

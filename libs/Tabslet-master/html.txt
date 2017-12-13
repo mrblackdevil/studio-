@@ -1,0 +1,9 @@
+<div data-toggle="tabslet" data-animation="true">
+	<ul class="horizontal">
+		<li class="active"><a href="#tab-1">information</a></li>
+		<li class=""><a href="#tab-2">tab</a></li>
+		<li class=""><a href="#tab-3">tab</a></li>
+	</ul>
+	<div id="tab-1"><span>Just include the plugin and add the data attribute to your html tag!</span></div>
+	<div id="tab-2"><span>Just include the plugin and add the data attribute to your html tag!</span></div><div id="tab-3"><span>Just include the plugin and add the data attribute to your html tag!</span></div>
+</div>
